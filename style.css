@@ -1,215 +1,122 @@
-/* # Front-end Style Guide
+/*# Front-end Style Guide
+
 ## Layout
+
 The designs were created to the following widths:
+
 - Mobile: 375px
 - Desktop: 1440px
 
+## Colors
+
+### Primary
+
+- Yellow: hsl(47, 88%, 63%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Grey: hsl(0, 0%, 50%)
+- Black: hsl(0, 0%, 7%)
 
 ## Typography
+
 ### Body Copy
+
 - Font size (paragraph): 16px
 
-### Fonts
-- Family: [Young Serif](https://fonts.google.com/specimen/Young+Serif)
-- Weights: 400
+### Font
 
-- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
-- Weights: 400, 600, 700
+- Family: [Figtree](https://fonts.google.com/specimen/Figtree)
+- Weights: 600, 800
 */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap');
-
-:root {
-    /*Primarios*/
-    --Nutmeg: hsl(14, 45%, 36%);
-    --Dark-Raspberry: hsl(332, 51%, 32%);
-    /*Neutrales*/
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap');
+:root{
+   --Yellow: hsl(47, 88%, 63%); 
     --White: hsl(0, 0%, 100%);
-    --Rose-White: hsl(330, 100%, 98%);
-    --Eggshell: hsl(30, 54%, 90%);
-    --Light-Grey: hsl(30, 18%, 87%);
-    --Wenge-Brown: hsl(30, 10%, 34%);
-    --Dark-Charcoal: hsl(24, 5%, 18%);
+    --Grey: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%);
 }
-
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
+body{
     font-size: 16px;
-    font-family: "Outfit";
-    color: var(--Wenge-Brown);
+    font-family: "Figtree";
+    background-color: var(--Yellow);
 }
 
 .container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: hsl(0, 0%, 95%);
+    min-height: 95vh;
 }
-
-
 
 .card {
+    background-color: var(--White);
     width: 375px;
-    padding: 2rem;
-}
-
-.image img {
-    width: 100%;
-   object-fit: fill;
-   margin-bottom: 1.5em;
-   margin-left: 0px;
-}
-
-.card__title {
-    font-family: "Young Serif";
-    font-size: 1.1em;
-    line-height: 1;
-
-}
-
-.card__title h1 {
-    font-weight: 400;
-    margin-bottom: 1em;
-    color: black;
-}
-
-.card__summary {
-    margin-bottom: 1em;
-}
-
-.card__preparation {
-    background-color: var(--Rose-White);
     border-radius: 1em;
-    padding-left: 1.5em;
-    padding-top: 1.5em;
-    padding-right: 1.5em;
-}
-
-.card__preparation h2 {
-    color: var(--Dark-Raspberry);
-    font-size: 1.2em;
-}
-
-.card__preparation ul {
     padding: 1.5em;
-    line-height: 2;
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+-moz-box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+border: 1px solid black;
 }
 
-.card__preparation ul li {
-    padding-left: 1em;
-}
-.card__preparation ul li::marker {
-    color: var(--Nutmeg);
-}
-
-.bold-text {
-    font-weight: bold;
-}
-
-.sub-headings {
-    color: var(--Nutmeg);
-    font-family: "Young Serif";
-    font-weight: 400;
-    margin-top: 1em;
+.card__image img{
+    max-width: 100%;
+    border-radius: 0.8em;
     margin-bottom: 1em;
 }
 
-
-.card__ingredients ul {
-    padding-left: 1.5em;
-    line-height: 2;
-    margin-bottom: 1.2em;
-}
-
-.card__ingredients ul li {
-    padding-left: 1em;
-}
-.card__ingredients ul li::marker {
-    color: var(--Nutmeg);
-}
-
-.card__instructions ol {
-    padding-left: 1em;
-    line-height: 2;
-    margin-bottom: 1.2em;
-}
-
-.card__instructions ol li {
-    padding-left: 1.5em;
-}
-.card__instructions ol li::marker {
-    color: var(--Nutmeg);
-    font-weight: 600;
-}
-
-.card__nutrition__description{
+.card__tag {
+    background-color: var(--Yellow);
+    padding: 0.4em 1em;
+    font-size: 0.9rem;
+    font-weight: 800;
+    border-radius: 0.4em;
+    width: 6em;
     margin-bottom: 1em;
 }
-.card__nutrition__list{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    margin-left: 2em;
+
+.card__date{
+    color: hsl(0, 1%, 26%);
+    margin-bottom: 1em;
+    font-size: 0.9rem;
 }
 
-.card__nutrition__line{
+h1{
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+
+h1:hover{
+    cursor: pointer;
+    color: var(--Yellow);
+    caret-color: black;
+}
+
+.card__description{
+    font-size: 1rem;
+    color: var(--Grey);
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+.card__line{
     display: flex;
-    justify-content: left;
+    align-items: center;
     gap: 1em;
-    padding-bottom: 1em;
-    padding-top: 1em;
-}
-.card__nutrition__ing{
-    width: 50%;
 }
 
-.card__nutrition__qty{
-    font-weight: 600;
-    color: var(--Nutmeg);
+.card__line img{
+    width: 30px;
 }
 
-
-
-
-@media (min-width: 600px){
-    .card{
-        width: 450px;
-    }
-    .image img {
-        max-width: 450px;
-        object-fit: cover;
-    }
-}
-@media (min-width: 800px){
-    .card{
-        width: 600px;
-    }
-    .image img {
-       max-width:600px;
-        object-fit: cover;
-    }
-}
-
-@media (min-width: 900px){
-    .container{
-        background-color: var(--Eggshell);
-    }
-    .card{
-        width: 735px;
-        background-color: white;
-        padding: 2.5rem;
-    }
-    .image img {
-        max-width:735px;
-        object-fit: cover;
-        border-radius: 1em;
-    }
-   
+.card__line__name{
+    font-weight: 700;
+    font-size: 0.9rem;
 }
